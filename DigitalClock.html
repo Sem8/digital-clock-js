@@ -19,7 +19,12 @@
         let time = `${h} : ${m} : ${s}`;
 
         document.getElementById('MyClockDisplay').innerText = time;
+
+        // For accessibility in Internet Explorer where innerText does not work
+        document.getElementById('MyClockDisplay').textContent = time;
     }
+
+    setInterval(showTime, 1000);
     </script>
     
 </body>
