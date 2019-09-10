@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS- Digital Clock</title>
+</head>
+<body>
+    <div id='MyClockDisplay'></div>
+    <script type='text/javascript'>
+
+    const showTime = () => {
+        let date = new Date();
+        let h = date.getHours(); // 0-23
+        let m = date.getMinutes(); // 0-59
+        let s = date.getSeconds(); // 0 - 59
+
+        let time = `${h} : ${m} : ${s}`;
+
+        document.getElementById('MyClockDisplay').innerText = time;
+    }
+    </script>
+    
+</body>
+</html>
